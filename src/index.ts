@@ -3,8 +3,9 @@ import cors from 'cors';
 import helmet from 'helmet';
 import { json } from 'body-parser';
 import { applyHandlers } from './handlers';
+import config from './config';
 
-const APP_PORT = process.env.PORT || 4000;
+const APP_PORT = config.port;
 
 // app initialization
 const app = express();
