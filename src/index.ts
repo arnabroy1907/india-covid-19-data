@@ -15,6 +15,13 @@ app.use(cors());
 app.use(helmet());
 app.use(json());
 
+// health check
+app.get('/health', (req, res) => {
+    return res.status(200).send({
+        status: 'OK',
+    })
+});
+
 applyHandlers(app);
 
 // app listener
