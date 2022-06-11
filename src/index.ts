@@ -4,7 +4,7 @@ import helmet from 'helmet';
 import { json } from 'body-parser';
 import { applyHandlers } from './handlers';
 
-const APP_PORT = 4000;
+const APP_PORT = process.env.PORT || 4000;
 
 // app initialization
 const app = express();
