@@ -12,7 +12,7 @@ const app = express();
 
 // app basic middlewares
 app.use(cors({
-    origin: ['india-covid19-app.firebaseapp.com', 'india-covid19-app.web.app']
+    origin: ['https://india-covid19-app.firebaseapp.com/', 'https://india-covid19-app.web.app/']
 }));
 app.use(helmet());
 app.use(json());
