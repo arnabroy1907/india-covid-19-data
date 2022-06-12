@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction } from 'express';
+import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import { json } from 'body-parser';
@@ -11,7 +11,9 @@ const APP_PORT = config.port;
 const app = express();
 
 // app basic middlewares
-app.use(cors());
+app.use(cors({
+    origin: ['india-covid19-app.firebaseapp.com', 'india-covid19-app.web.app']
+}));
 app.use(helmet());
 app.use(json());
 

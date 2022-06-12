@@ -24,7 +24,7 @@ const convertData = (mohData: MohApiData | null): CountryCovidData | null => {
         let countryData: CovidData = {};
 
         mohData.data.forEach((st: CovidApiData) => {
-            const stateName = st.state_name;
+            const stateName = st.state_name.replace(/\*/g, '');
             const stateCode = st.state_code;
 
             // active calculation
@@ -46,7 +46,7 @@ const convertData = (mohData: MohApiData | null): CountryCovidData | null => {
             const totalDeath: number = getNumFromString(st.new_death);
             const prevDeath: number = getNumFromString(st.death);
             const deathReconsille: number = st.state_code === "00" ? 0 : getNumFromString(st.death_reconsille);
-            const newDeath: number = totalDeath - prevDeath;
+            const newDeath: number = totalDeath + deathReconsille - prevDeath;
 
             const covidData: CovidData = {
                 stateCode,
