@@ -20,7 +20,7 @@ Try calling the <https://india-covid19-data.herokuapp.com/api/covid-data> API to
 * go to local directory
 * run `yarn` to install all packages
 * run `yarn build` to create a build from the .ts files
-* run `yarn start` to start the server. This is now accessible at <http://localhost:4000>
+* run `yarn start` to start the server. This is will become available at <http://localhost:4000>
 * the covid data would be available at <http://localhost:4000/api/covid-data> with a `GET` call
 
 ## Heroku
