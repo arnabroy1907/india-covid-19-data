@@ -14,7 +14,7 @@ Try calling the <https://india-covid19-data.herokuapp.com/api/covid-data> API to
 
 ## Installation
 
-> Pre-requisites: Node V >= 14.x.x and yarn V >= 17.x.x
+> Pre-requisites: Node V >= 14.x.x and yarn V >= 1.17.x
 
 * clone this repo in your local using `git clone`
 * go to local directory
